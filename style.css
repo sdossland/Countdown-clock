@@ -5,10 +5,14 @@ body {
     text-align: center;
 }
 .options {
-    height: 50px;
+    line-height: 50px;
 }
-.quickOption {
+button, input {
     display: inline-block;
+    margin: 0 30px;
+}
+input {
+    height: 25px;
 }
 .container {
     position: absolute;

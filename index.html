@@ -8,16 +8,18 @@
 </head>
 <body>
 <div class="options">
-    <div class="quickOption">20 seconds</div>
-    <div class="quickOption">Work 5</div>
-    <div class="quickOption">Quick 15</div>
-    <div class="quickOption">Snack 20</div>
-    <div class="quickOption">Lunch break</div>
-    <input class="quickOption" placeholder="Enter minutes" />
+    <button data-time="20">20 seconds</button>
+    <button class="quickOption" data-time="300">Work 5</button>
+    <button class="quickOption" data-time="900">Quick 15</button>
+    <button class="quickOption" data-time="1200">Snack 20</button>
+    <button class="quickOption" data-time="3600">Lunch break</button>
+    <form>
+        <input type="text" name="minutes" placeholder="Enter minutes" />
+    </form>
 </div>
 <div class="container">
-    <div class="timer">test</div>
-    <div class="return">test</div>
+    <div class="timer"></div>
+    <div class="returnTime"></div>
 </div>
 </body>
 </html>
