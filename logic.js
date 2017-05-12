@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const countdown = document.querySelector('.timer');
-  const returnAt = document.querySelector('.returnTime');
+  const returnAt = document.querySelector('.returnTimeMsg');
 
   function timer(seconds) {
     const currentTime = Date.now();
