@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const countdown = document.querySelector('.timer');
   const returnAt = document.querySelector('.returnTimeMsg');
+  const buttons = document.querySelectorAll('button');
+  const customTime = document.querySelector('input');
 
   function timer(seconds) {
     const currentTime = Date.now();
@@ -38,7 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     returnAt.textContent = `Return at ${modifiedHour}:${returnMinutes < 10 ? '0' : ''}${returnMinutes}`;
   }
 
-  //calls timer
-  timer(124);
+  //calls timer using predefined time of button
+  function runTimer() {
+    const preDefinedTime = this.dataset.time; //accesses data-time attribute of 'clicked' element
+    const customTime = this.value * 60; //accesses user input
+    timer(preDefinedTime ? preDefinedTime : customTime);
+  }
+  //must clear preexisting timer if click another button when one is already running!!!
+
+  buttons.forEach(button => {
+    button.addEventListener('click', runTimer);
+  });
+
+  //calls timer using user input
+  customTime.addEventListener('keyup', runTimer);
 
 });
